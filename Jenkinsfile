@@ -4,7 +4,7 @@ pipeline {
       stage("Build") {
       steps {
 	      echo 'Building the solution'
-        sh "./Docker build"
+        sh "./Docker"
       }
     }
   }
