@@ -1,27 +1,10 @@
 pipeline {
   agent any
 	
-  triggers {
-    pollSCM('* * * * *')
-  }
-	
-  stages {
-    stage("Compile") {
+      stage("Build") {
       steps {
-        sh "./Docker compileCode"
-      }
-    }
-  }
-	
-	 stage("Build") {
-      steps {
+	      echo 'Building the solution'
         sh "./Docker build"
-      }
-    }
-	
-	stage("Unit test") {
-      steps {
-        sh "./Docker test"
       }
     }
 }
