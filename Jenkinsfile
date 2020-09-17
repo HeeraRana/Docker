@@ -11,6 +11,7 @@ pipeline {
         sh "./Docker compileCode"
       }
     }
+  }
 	
 	 stage("Build") {
       steps {
@@ -23,5 +24,4 @@ pipeline {
         sh "./Docker test"
       }
     }
-	
-	
+}
